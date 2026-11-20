@@ -14,16 +14,16 @@ export default function NavBar() {
           <Link className="nav-link nav-link-active" href="/">
             Discover
           </Link>
-          <a className="nav-link" href="#recipes">
+          <Link className="nav-link" href="/#recipes">
             Recipes
-          </a>
-          <a className="nav-link" href="#about">
+          </Link>
+          <Link className="nav-link" href="/#about">
             About
-          </a>
+          </Link>
         </div>
-        <a className="nav-cta" href="#recipes">
+        <Link className="nav-cta" href="/#recipes">
           Find a recipe <span aria-hidden="true">↗</span>
-        </a>
+        </Link>
       </nav>
     </header>
   );

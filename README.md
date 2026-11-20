@@ -17,6 +17,8 @@ Open [http://localhost:3000](http://localhost:3000) to view the home page.
 
 - `app/data/recipes.ts` contains the typed recipe data.
 - `app/components/RecipeCard.tsx` renders a reusable recipe card.
+- `app/components/RecipeGrid.tsx` provides live recipe search.
 - `app/components/NavBar.tsx` provides shared site navigation.
-- `app/page.tsx` maps the recipes into a responsive grid.
+- `app/page.tsx` supplies the recipe data to the searchable home page.
+- `app/recipe/[id]/page.tsx` renders each recipe's ingredients and steps.
 - `app/layout.tsx` wraps each page with the shared navigation.
