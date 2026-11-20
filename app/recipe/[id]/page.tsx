@@ -6,6 +6,8 @@ export function generateStaticParams() {
   return recipes.map((recipe) => ({ id: recipe.id }));
 }
 
+export const dynamicParams = false;
+
 export default async function RecipePage({
   params,
 }: {

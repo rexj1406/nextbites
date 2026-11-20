@@ -22,3 +22,13 @@ Open [http://localhost:3000](http://localhost:3000) to view the home page.
 - `app/page.tsx` supplies the recipe data to the searchable home page.
 - `app/recipe/[id]/page.tsx` renders each recipe's ingredients and steps.
 - `app/layout.tsx` wraps each page with the shared navigation.
+
+## Deploy to GitHub Pages
+
+The project exports static files to `out/` and is configured for the
+`rexj1406.github.io/nextbites` project URL. The GitHub Actions workflow builds
+and deploys the site whenever changes are pushed to `main`.
+
+In the repository settings, open **Pages** and set **Build and deployment** to
+**GitHub Actions**. After the workflow succeeds, visit
+[https://rexj1406.github.io/nextbites/](https://rexj1406.github.io/nextbites/).
