@@ -1,15 +1,16 @@
+import Link from "next/link";
 import type { Recipe } from "../data/recipes";
 
 export default function RecipeCard({ recipe }: { recipe: Recipe }) {
   return (
-    <article className="recipe-card">
+    <Link className="recipe-card" href={`/recipe/${recipe.id}`}>
       <div className={`recipe-art recipe-art-${recipe.color}`}>
         <span className="recipe-category">{recipe.category}</span>
         <span className="recipe-emoji" role="img" aria-label={recipe.title}>
           {recipe.emoji}
         </span>
         <span className="save-mark" aria-hidden="true">
-          +
+          ↗
         </span>
       </div>
       <div className="recipe-content">
@@ -26,6 +27,6 @@ export default function RecipeCard({ recipe }: { recipe: Recipe }) {
           <span>{recipe.cuisine}</span>
         </div>
       </div>
-    </article>
+    </Link>
   );
 }

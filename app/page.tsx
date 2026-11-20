@@ -1,5 +1,5 @@
 import Link from "next/link";
-import RecipeCard from "./components/RecipeCard";
+import RecipeGrid from "./components/RecipeGrid";
 import { recipes } from "./data/recipes";
 
 export default function Home() {
@@ -67,7 +67,9 @@ export default function Home() {
         >
           <div className="section-topline">
             <p className="eyebrow">A FEW GOOD THINGS</p>
-            <span className="recipe-count">01 — 06</span>
+            <span className="recipe-count">
+              {String(recipes.length).padStart(2, "0")} RECIPES
+            </span>
           </div>
           <div className="section-heading">
             <div>
@@ -78,11 +80,7 @@ export default function Home() {
               See all recipes <span aria-hidden="true">↗</span>
             </a>
           </div>
-          <div className="recipe-grid">
-            {recipes.map((recipe) => (
-              <RecipeCard key={recipe.id} recipe={recipe} />
-            ))}
-          </div>
+          <RecipeGrid recipes={recipes} />
         </section>
       </main>
       <footer className="site-footer" id="about">
